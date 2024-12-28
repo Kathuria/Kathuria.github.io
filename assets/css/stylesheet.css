@@ -1,0 +1,144 @@
+@import 'https://fonts.googleapis.com/css?family=Ubuntu:300, 400, 500, 700';
+
+.container {
+  text-align: center;
+}
+.fullscreen-iframe {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+.fullscreen-iframe iframe {
+  width: 50%;
+  height: 100%;
+  border: none;
+  overflow: auto;
+}
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+.close-button:hover {
+  background-color: #fff;
+}
+.download-link {
+  color: #fff;
+  text-decoration: none;
+}
+.download-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.typewriter{ 
+  margin-top: 192px;
+  margin-bottom: 86px;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 12px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: rgb(15 23 42);
+  border-radius: 6px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: rgb(203 213 225);
+  border-radius: 6px;
+}
+
+.typewriter h1 {
+  font-size: 64px;
+  overflow: hidden;
+  border-right: .15em solid rgb(15 23 42);
+  white-space: nowrap;
+  margin: 16px auto; 
+}
+
+@media (max-width: 1000px) {
+  .typewriter h1 {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .typewriter{ 
+    margin-top: 320px;
+    margin-bottom: 112px;
+  }
+
+  .typewriter h1 {
+    font-size: 36px;
+  }
+}
+
+.typewriter h1:nth-child(1) {
+  width: 7.2em;
+  animation: typing1 1.2s steps(40, end), blink-caret .5s step-end infinite;
+  animation-fill-mode: forwards;
+}
+
+.typewriter h1:nth-child(2) {
+  width: 8.8em;
+  opacity: 0;
+  animation: typing2 1.5s steps(40, end), blink-caret .5s step-end infinite;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes typing1 {
+  from { 
+    width: 0 
+  }
+  to { 
+    width: 7.2em; 
+    border: none
+  }
+}
+
+@keyframes typing2 {
+  from { 
+    width: 0; 
+    opacity: 1 
+  }
+  to { 
+    width: 8.8em; 
+    opacity: 1 
+  }
+}
+
+:root {
+  --background-color: transparent;
+  --caret-color: rgb(203, 213, 225);
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: var(--background-color);
+  }
+  50% {
+    border-color: var(--caret-color);
+  }
+}
